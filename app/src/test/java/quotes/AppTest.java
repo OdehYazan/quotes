@@ -24,6 +24,12 @@ class AppTest {
             e.printStackTrace();
         }
     }
+    @Test void testApiReader() {
+        String urlApi = "http://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en";
+        String testQuote =  App.apiData(urlApi);
+        assertTrue(testQuote != null);
+    }
+
 
 
 
